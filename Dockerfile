@@ -20,7 +20,7 @@ RUN wget --no-verbose https://download3.rstudio.org/ubuntu-14.04/x86_64/VERSION 
     rm -f version.txt ss-latest.deb && \
     . /etc/environment && \
     R -e "install.packages(c('shiny', 'rmarkdown'), repos='$MRAN')" && \
-    cp -R C:\Program Files (x86)\DMO_analytics/* /srv/shiny-server/ && \
+    cp -R "C:\Program Files (x86)\DMO_analytics/*" /srv/shiny-server/ && \
     chown shiny:shiny /var/lib/shiny-server
 
 EXPOSE 3838
