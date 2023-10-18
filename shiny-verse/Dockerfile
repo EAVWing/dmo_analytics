@@ -21,5 +21,6 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     selectr \
     caTools \
 	BiocManager \
+  && R -e "devtools::install_github('stewing-co/DomoR')" \
   && rm -rf /tmp/downloaded_packages
 
